@@ -1,0 +1,19 @@
+package com.hwadee.mimile.action;
+
+import com.hwadee.mimile.pojo.Manager;
+import com.hwadee.mimile.pojo.User;
+import com.hwadee.mimile.service.ManagerService;
+
+//用于控制管理员登陆是否成功
+public class ManagerAction 
+{
+	public Manager manager=new Manager();
+	
+	private ManagerService managerService= new ManagerService();
+	public String execute()
+	{
+		if(managerService.check(manager))
+		return "T";
+		else return "F";
+	}
+}

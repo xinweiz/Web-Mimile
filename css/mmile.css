@@ -1,0 +1,110 @@
+html,body{height: 100%;}
+ul{list-style: none;}
+li{list-style-type: none;padding-left: 15px;margin: 0;}
+a{text-decoration: none; color: #000;}
+a:hover{color: #ff6d00; text-decoration: none;}
+a:-webkit-any-link{cursor: auto;}
+div{display: block;}
+input{margin:0px;font:inherit;}
+/*页头*/
+.header li{float: left;}
+.header_top{font-size: 13px;margin-top:11px;line-height: 50px;}
+.navbar .dropdown-menu {padding: 0;}
+.navbar .dropdown-menu li{width: 115px;}
+.navbar .dropdown-menu li a:hover{width: 115px;}
+.header_top ul li{float: left;display: inline-block;}
+.header_search{position: relative;left: 12%;top:80px;width:650px;float: left;}
+.header_search input{font-family:cursive;text-indent:1em;color:#929292;outline:none;border-radius: 50px;width: 400px;height: 30px;}
+.header_bottom{width: 100%;height: 70px;position:relative;top: 94px;display: block;}
+.container {margin: auto 0;width:1250px;border-bottom: 1px solid #f8f8f8;}
+.container div{float: left;}
+.h_menu8 {padding: 0 1em;padding: 5px 5px;color: #000;font-size: 1.4em;font-weight: 400;margin: 0.8em 0 0;}
+.dropdown-menu ul{border-left: 10px;}
+.dropdown-menu li{padding: 0;font-size: 15px;}
+.dropdown-menu li a{width: 220px;line-height:40px;border-radius: 0px;}
+.dropdown-menu li a:hover{padding-left:25px;margin: 0;border: 0;}
+.btn {font-size: 16px;width: 233px;height: 40px;}
+.recommended_items{height: 40px;text-align: center;width: 78%;}
+.recommended_items span{float: left; font-size: 18px;padding-left:100px;margin: 10px auto;}
+.carousel-inner img{width: 100%;height: 394px;}
+.navtabs div{float: left;display: inline-block;}
+.left-nav{position:relative;top:63px;width: 262px;margin: 0;padding: 0;}
+.left-nav li{border: 1px solid #CCC;line-height: 43px;background-color: #CCC;}
+/*主页商品*/
+.products_nav ul li{position: relative;float: left;}
+.homepage_products{position: relative;float:left;top: 70px;}
+.homepage_products li{width: 230px;float: left;}
+.homepage_products div{height:330px;}
+/*登录*/
+.login{float: left;position: relative;left: -3%;top:130px;width: 378px;}
+.log_bt{width:270px;height:40px;margin: 20px 0;}
+.log_bt:hover{}
+.logo{position: relative;left:10%;top:75px;width: 212px;}
+.valentine_p {position: relative;top: 160px;left: -7%;}
+#yanzhengma { font-size: 16px; width: 100px;height: 18px;padding:1px 0px;float: left;margin: 2px 50px;margin-right: 0px;}
+#imagecode {width: 80px; height: 40px; margin: 0px 30px; margin-right:0;float: left;}
+/*注册*/
+.rgt{position: absolute;top: 170px;left:120px;height: 62px;width:1000px;border-bottom: 2px solid #e6e6e6;text-align: center;}
+.rgt ul{margin-top: 20px;}
+.rgt li{display: inline-block;padding: 0px 20px;text-align: center;margin: 0 20px;cursor: pointer;font-size: 20px;font-family: \5FAE\8F6F\96C5\9ED1,arial;border-bottom: 2px solid #E02423}
+/*服务协议*/
+.protocol {position: absolute;top: 170px;left:120px;height: 62px;width:1000px;border-bottom: 2px solid #e6e6e6;text-align: center;}
+.protocol ul{margin-top: 2px;}
+.protocol li{display: inline-block;padding: 20px 20px;text-align: center;margin: 0 20px;cursor: pointer;font-size: 20px;font-family: \5FAE\8F6F\96C5\9ED1,arial;border-bottom: 2px solid #E02423}
+.protocol p{margin: 0;}
+.protocol h4{margin: 0;}
+/*商品详情*/
+.details {position: relative;top:70px;}
+.details div{float: left;}
+.pro_picture{position: relative;left: 80px;}
+.details_right{position: relative;top: 0px;}
+.name{border-bottom: 1px dotted #C0C0C0}
+.details_right {padding: 15px 7px;font-family: SimSun;}
+.details_right dl{height: 30px;  line-height: 40px; margin:0;margin: 35px auto;}
+.details_right dl dt{font-family: SimSun;text-align: left;width: 21%;  line-height: 20px;  vertical-align: top;  letter-spacing: normal;  word-spacing: normal;  display: inline-block;  min-height: 20px;  padding: 10px 0;}
+.details_right dl dd{line-height: 20px;display: inline-block;}
+.details_right dl input{line-height: 20px;display: inline-block;text-align: center;}
+.details_right dl button{display: inline-block;width: 20px;height: 25px;padding: 0;border:none;background-color: #fff;}
+.details_right button{line-height: 20px;width: 120px;margin-bottom: 10px;}
+.details_right p{line-height: 30px; display: inline-block;}
+.evaluate{position: relative;top:100px;float: left;width: 100%;}
+/*用户界面*/
+.header_top div a{border-radius: 1px;}
+.header_top div a:hover{color: #929292;border-bottom-right-radius: 20px;border-top-left-radius: 20px;}
+.header_top div .dropdown-menu{margin: 0;border: 0;padding: 0;}
+.tabbable ul li{width: 130px;margin-left: 20px;text-align: center;}
+.tabbable ul li a:hover{background-color: #fff;}
+.radio{display: inline-block; margin-left: 9px;}
+.select_date {display: inline-block;}
+.select_date form select{width: 70px;height: 25px;}
+.select_city {display: inline-block;}
+.select_city form select {width: 100px;height: 25px;}
+.select_city form input {margin-bottom: 10px;padding: 0;width: 100px;text-align: left;}
+.add_address_details dl dt{float: left;}
+.accordion-group ul li{float: left;display: inline-block;padding-left: 0;margin-left:0;margin-right: 20px;margin-top: 10px;margin-bottom: 10px;}
+/*商品评价*/
+.pro ul li{float: left;display: inline-block;padding-left: 0;margin-right: 40px;margin-top: 10px;margin-bottom: 10px;}
+.Ebuttons{float: right;}
+.Ebuttons button{width: 130px;height: 35px;margin-left: 20px;}
+/*站内信*/
+.news li{margin: 10px auto;}
+.news li a{width: 50%;}
+.message {margin: 0;}
+.message li{float: left;display: inline-block;padding-left: 0;}
+/*购物车*/
+.shopping_cart ul li{float: left;display: inline-block;padding-left: 0;margin-right: 40px;margin-top: 10px;margin-bottom: 10px;}
+.shopping_cart ul li button{display: inline-block;width: 20px;height: 25px;padding: 0;border:none;background-color: #fff;margin-bottom: 10px;}
+#pay ul li{float: left;display: inline-block;padding-left: 0;margin-right: 40px;margin-top: 10px;margin-bottom: 10px;}
+.modal-footer button{width: 150px;height: 30px;}
+/*支付成功+积分获得*/
+.pay_success{border: 1px dashed #ee8b83;position: relative;left: 20%;top: 50px;width: 60%;display: inline-block;}
+.pay_success h2{float: left;margin-left: 22%;margin-top: 40px;}
+.pay_success p{float: left;margin: 0px 0px;font-size: 18px;margin-top: 38px;}
+.pay_success em{float: left;margin: auto 5px;margin-top: 38px;}
+/*页脚*/
+.lis{float: left;width: 15%;border-top: 1px solid #CDCDCD;padding: 20px 10px;}
+.lis p{font-size: 18px;font-weight: 600;border-bottom: 1px solid #CDCDCD;width: 50%;padding-bottom: 10px;}
+.lis ul{}
+.lis ul li{margin-left: -25px;}
+.footer{border-top: 2px solid #e6e6e6;font-size: 15px !important;text-align: center;padding-bottom: 10px;overflow: hidden;float: bottom;}
+.footer li{margin: 10px auto;}

@@ -1,0 +1,10 @@
+1.链接的url格式：
+	http://localhost:8080/loginAction
+	不用在后面加.action，因为我已经把web.xml中的拦截方法改为了/*
+2.请前端同学注意！提交的表单form的action应该与struts.xml中的action的name一致！
+	比如：<action name="userActionAdd" class="com.hwadee.lsdbs.action.UserAction" method="save">
+            <result name="index" type="redirect">/usermanage/index.jsp</result>
+        </action>
+  那么你的form中，name="userActionAdd"。
+ 3.请大家将数据库密码改为111，方便调试！
+ 	数据库mml

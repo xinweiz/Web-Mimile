@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="唐雨操的用户登录" extends="struts-default" namespace="/">
+		<action name="loginAction" class="com.hwadee.mimile.action.LoginAction" method="execute">
+			<!-- 这里存放前端同学写的登陆成功的界面 -->	
+			<result name="T">/index.html</result><!--  -->
+			<result name="F">/pages/login/failTYC.jsp</result>
+		</action>
+		<action name="registerAction" class="com.hwadee.mimile.action.LoginAction" method="register">
+			<!-- 这里存放前端同学写的登陆成功的界面 -->	
+			<result name="mainPage">/index.html</result><!--  -->
+		</action>
+		
+		<action name="managerAction" class="com.hwadee.mimile.action.ManagerAction" method="execute">
+			<!-- 这里存放前端同学写的登陆成功的界面 -->	
+			<result name="T">/pages/manager/showProductsTYC.jsp</result><!--  -->
+			<result name="F">/pages/manager/failTYC.jsp</result>
+		</action>
+		
+		<action name="goodsActionAdd" class="com.hwadee.mimile.action.GoodsAction" method="save">
+			<result name="showGoods" type="redirect">/pages/manager/showProductsTYC.jsp</result>
+		
+		</action>
+		<action name="goodsActionFindById" class="com.hwadee.mimile.action.GoodsAction" method="findById">
+            <result name="modGoods" type="redirect">/pages/manager/modGoodsTYC.jsp</result>
+        </action>
+        <action name="goodsActionDel" class="com.hwadee.mimile.action.GoodsAction" method="delete">
+            <result name="showGoods" type="redirect">/pages/manager/showProductsTYC.jsp</result>
+        </action>
+	</package>
+</struts>    

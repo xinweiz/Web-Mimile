@@ -1,0 +1,29 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
+
+<html>
+   <title>用户管理</title>
+   <head></head>
+   <body>
+       <h2 align="center">修改用户</h2>
+       <hr>
+       <form action="userActionMod.action" method="post">
+       <table width="80%" border="1" align="center" style="border: 1px solid blue;border-collapse: collapse;">
+           <tr align="center">
+               <td>用户名称：<input type="text" name="user.username" value="${user.username}"></td>
+               <td>密码:<input type="text" name="user.pwd" value="${user.pwd}"></td>
+           </tr>
+       </table>
+       <table width="80%" border="0" align="center">
+       <tr>
+               <td>
+                   <input type="submit" value="保存">
+                  
+               </td>
+           </tr>
+       </table>
+       <input type="hidden" name="user.user_id" value="${user.user_id}" />
+       </form>
+   </body>
+</html>
+

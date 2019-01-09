@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="唐雨操" extends="struts-default" namespace="/">
+		<action name="loginAction" class="com.hwadee.mimile.action.LoginAction" method="execute">
+			<!-- 这里存放前端同学写的登陆成功的界面 -->	
+			<result name="T" type="redirect">/pages/homepage/index.jsp</result><!--  -->
+			<result name="F">/pages/login/login.html</result>
+		</action>
+		
+		 <action name="logoutAction" class="com.hwadee.mimile.action.LogoutAction" method="logout">
+		 	<result name="logout" type="redirect">/pages/homepage/index.jsp</result>
+		 </action>
+		
+		<action name="registerAction" class="com.hwadee.mimile.action.LoginAction" method="register">
+			<!-- 这里存放前端同学写的登陆成功的界面 -->	
+			<result name="mainPage" type="redirect">/pages/homepage/index.jsp</result><!--  -->
+			<result name="fail" >/pages/register/register.jsp</result>
+		</action>
+		
+		<action name="managerAction" class="com.hwadee.mimile.action.ManagerAction" method="execute">
+			<!-- 这里存放前端同学写的登陆成功的界面 -->	
+			<result name="T" type="redirect">/pages/manager/goodListWW.jsp</result><!--  -->
+			<result name="F">/pages/manager/failTYC.jsp</result>
+		</action>
+		
+		<action name="goodsActionAdd" class="com.hwadee.mimile.action.GoodsAction" method="save">
+			<result name="showGoods" type="redirect">/pages/manager/goodListWW.jsp</result>
+		
+		</action>
+		
+		<action name="goodsActionFindById" class="com.hwadee.mimile.action.GoodsAction" method="findById">
+            <result name="modGoods" >/pages/manager/modGoodsTYC.jsp</result>
+        </action>
+        
+        <action name="goodsActionMod" class="com.hwadee.mimile.util.FileUpload" method="execute">
+        	<result name="T" type="redirect">/pages/manager/goodListWW.jsp</result>
+        </action>
+        
+        <action name="goodsActionDel" class="com.hwadee.mimile.action.GoodsAction" method="delete">
+            <result name="showGoods" type="redirect">/pages/manager/goodListWW.jsp</result>
+          
+        </action>
+        
+        
+        <action name="picture" class="com.hwadee.mimile.util.CheckPicture" method="getImage">
+        </action>
+        
+         <action name="verification" class="com.hwadee.mimile.util.CheckPicture" method="verification">
+         	<result name="true" type="redirect">/pages/register/registerTag2.jsp</result>
+         	<result name="false" type="redirect">/pages/register/register.jsp</result>
+         	
+        </action>
+        <!--  -->
+        <action name="loginCheck" class="com.hwadee.mimile.util.CheckPicture" method="loginCheck">
+         	<result name="true" type="redirectAction">
+         		<param name="actionName">loginAction</param>
+         		<param name="user.uphonenum">${user.uphonenum}</param>
+         		<param name="user.upwd">${user.upwd}</param>
+         	</result>
+         	<result name="false" type="redirect">/pages/login/login.html</result>
+         	
+        </action>
+	</package>
+	<package name="a" extends="struts-default" namespace="/">
+    
+    
+	<action name="delGoodsFromDetail" class="com.hwadee.mimile.dao.DetailDao" method="delGoodsFromDetail">
+		<result name="T">/pages/buyer/BuyInformation.jsp</result>
+	</action>   
+	
+	<action name="CartAction" class="com.hwadee.mimile.action.CartAction" method="addCart">
+		<result name="T">/pages/buyer/ShoppingCart.jsp</result>
+	</action>
+	
+	<action name="addCart" class="com.hwadee.mimile.action.CartAction" method="addCart">
+		<result name="T">/pages/buyer/ShoppingCart.jsp</result>
+	</action>
+	
+	<action name="delCart" class="com.hwadee.mimile.action.CartAction" method="delCart">
+		<result name="T">/pages/buyer/ShoppingCart.jsp</result>
+	</action>
+	
+	<action name="saveAddr" class="com.hwadee.mimile.dao.AddressDao" method="saveAddre">
+		<result name="T" type="redirect">/pages/buyer/BuyInformation.jsp</result>
+	</action>
+	
+	<action name="delAddr" class="com.hwadee.mimile.dao.AddressDao" method="delAddr">
+		<result name="T">/pages/buyer/BuyInformation.jsp</result>
+	</action>
+	
+	<action name="success" class="com.hwadee.mimile.dao.FeeDao" method="cost">
+		<result name="T">/pages/buyer/PaySuccess.jsp</result>
+	</action>
+
+
+	<action name="buy" class="com.hwadee.mimile.dao.OrdersDao" method="bought">
+		<result name="T" >/pages/buyer/PaySuccess.jsp</result>
+	</action>
+	
+	<action name="cancel" class="com.hwadee.mimile.dao.OrdersDao" method="saveOrders">
+		<result name="T" type="redirect">/pages/buyer/BuyInformation.jsp</result>
+	</action>	
+	<action name="saveComments" class="com.hwadee.mimile.dao.CommentsDao" method="saveComments">
+		<result name="T">/pages/buyer/Estimate.jsp</result>
+	</action>
+	
+	<action name="completeComments" class="com.hwadee.mimile.dao.CommentsDao" method="completeComments">
+		<result name="T" type="redirect">/pages/buyer/original.jsp</result>
+	</action>
+	
+	<action name="PaySccess" class="com.hwadee.mimile.dao.OrdersDao" method="payOff">
+		<result name="T" type="redirect">/pages/buyer/original.jsp</result>
+	</action>
+	
+    </package>
+</struts>    

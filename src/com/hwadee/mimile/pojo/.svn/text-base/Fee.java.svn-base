@@ -1,0 +1,52 @@
+package com.hwadee.mimile.pojo;
+
+public class Fee {
+	
+    /*发货省份*/
+    private String from_addr;
+    /*收货省份*/
+    private String to_addr;
+    /*邮寄公司*/
+    private String express;
+    /*邮寄费用*/
+    private float cost;
+    /*收费号*/
+    private int fee_id;
+    
+    
+    
+    
+	public String getFrom_addr() {
+		return from_addr;
+	}
+	public void setFrom_addr(String fromAddr) {
+		from_addr = fromAddr;
+	}
+	public String getTo_addr() {
+		return to_addr;
+	}
+	public void setTo_addr(String toAddr) {
+		to_addr = toAddr;
+	}
+	public String getExpress() {
+		return express;
+	}
+	public void setExpress(String express) {
+		this.express = express;
+	}
+	public float getCost() {
+		return cost;
+	}
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+	public int getFee_id() {
+		return fee_id;
+	}
+	public void setFee_id(int feeId) {
+		fee_id = feeId;
+	}
+    
+    
+    
+}

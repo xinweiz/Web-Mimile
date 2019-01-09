@@ -1,0 +1,32 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
+
+<html>
+   <title>用户管理</title>
+   <head></head>
+   <body>
+       <h2 align="center">添加用户</h2>
+       <hr>
+       
+       <form action="registerAction" method="post">
+	       <table width="80%" border="1" align="center" style="border: 1px solid blue;border-collapse: collapse;">
+	           <tr align="center">
+	               <td>用户手机号：<input type="text" name="user.uphonenum"></td>
+	               <td>密码:<input type="text" name="user.upwd"></td>
+	               <td>省份：<input type="text" name="user.uprovince"></td>
+	               <td>信用卡号：<input type="text" name="user.ucard"></td>
+	           </tr>
+	       </table>
+       
+       
+       <table width="80%" border="0" align="center">
+       <tr>
+               <td>
+                   <input type="submit" value="保存">
+               </td>
+           </tr>
+       </table>
+       </form>
+   </body>
+</html>
+

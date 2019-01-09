@@ -1,0 +1,17 @@
+package com.hwadee.mimile.service;
+import java.util.List;
+
+import com.hwadee.mimile.dao.CommentsDao;
+import com.hwadee.mimile.pojo.Comments;
+public class CommentsService {
+	CommentsDao commentsDao=new CommentsDao();
+	public void addComments(Comments comments)
+	{
+		commentsDao.addComments(comments);
+	}
+	public List findAll(int cid)
+	{
+		return commentsDao.findAll(cid);
+	}
+	
+}

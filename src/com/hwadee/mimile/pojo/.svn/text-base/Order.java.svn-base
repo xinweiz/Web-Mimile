@@ -1,0 +1,52 @@
+package com.hwadee.mimile.pojo;
+
+
+public class Order {
+	
+	/*数据库的主键  订单号*/
+    private int oid;
+	/*订单状态*/
+    private char ostatus;
+	/*订单时间*/
+    private String otime;
+	/*订货数量*/
+    private int ammount;
+	/*用户号*/
+    private int uid;
+    
+    
+    
+    
+	public int getOid() {
+		return oid;
+	}
+	public void setOid(int oid) {
+		this.oid = oid;
+	}
+	public char getOstatus() {
+		return ostatus;
+	}
+	public void setOstatus(char ostatus) {
+		this.ostatus = ostatus;
+	}
+	public String getOtime() {
+		return otime;
+	}
+	public void setOtime(String otime) {
+		this.otime = otime;
+	}
+	public int getAmmount() {
+		return ammount;
+	}
+	public void setAmmount(int ammount) {
+		this.ammount = ammount;
+	}
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+    
+    
+}

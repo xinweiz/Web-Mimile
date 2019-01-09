@@ -1,0 +1,47 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
+
+<html>
+   <title>用户管理</title>
+   <head></head>
+   <body>
+       <h2 align="center">添加商品</h2>
+       <hr>
+       
+       <form action="goodsActionAdd" method="post">
+	       <table width="80%" border="1" align="center" style="border: 1px solid blue;border-collapse: collapse;">
+	           <tr align="center">
+	               <td>种类编号
+	               <select name="goods.tid">
+						<option value="1" name="">服装</option>
+						<option value="2">化妆品</option>
+						<option value="3" selected="selected">食物</option>
+						<option value="4">电器</option>
+						<option value="5">书籍</option>
+						<option value="6">数码</option>
+					</select>
+	               </td>
+	               <td>商品名称<input type="text" name="goods.gname"></td>
+	               <td>商品价格<input type="text" name="goods.gprice"></td>
+               </tr>
+                <tr align="center">
+	               <td>商品数量<input type="text" name="goods.gnum"></td>
+	               <td>产地<input type="text" name="goods.gaddress"></td>
+	               <td>上下架状态<input type="text" name="goods.gstatus"></td>
+	              
+	           </tr>
+	            <td>图片（链接）<input type="text" name="goods.gimageurl"></td>
+	       </table>
+       
+       
+       <table width="80%" border="0" align="center">
+       <tr>
+               <td>
+                   <input type="submit" value="保存">
+               </td>
+           </tr>
+       </table>
+       </form>
+   </body>
+</html>
+

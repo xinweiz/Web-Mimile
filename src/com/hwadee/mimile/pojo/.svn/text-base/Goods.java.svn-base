@@ -1,0 +1,74 @@
+package com.hwadee.mimile.pojo;
+//商品！
+public class Goods {
+	
+	/*数据库的主键  商品号*/
+    private int gid;
+    /*数据库的主键  商品类型号*/
+    private int tid;
+    /*商品库存数量*/
+	private int gnum;
+    /*商品名称*/
+    private String gname;
+    /*产地地址*/
+    private String gaddress;
+    /*商品状态*/
+    private String gstatus;
+    /*商品单价*/
+    private float gprice;
+    /*图片链接*/
+    private String gimageurl;
+    
+    
+    
+    
+	public String getGimageurl() {
+		return gimageurl;
+	}
+	public void setGimageurl(String gimageurl) {
+		this.gimageurl = gimageurl;
+	}
+	public int getGid() {
+		return gid;
+	}
+	public void setGid(int gid) {
+		this.gid = gid;
+	}
+	public int getTid() {
+		return tid;
+	}
+	public void setTid(int tid) {
+		this.tid = tid;
+	}
+	public int getGnum() {
+		return gnum;
+	}
+	public void setGnum(int gnum) {
+		this.gnum = gnum;
+	}
+	public String getGname() {
+		return gname;
+	}
+	public void setGname(String gname) {
+		this.gname = gname;
+	}
+	public String getGaddress() {
+		return gaddress;
+	}
+	public void setGaddress(String gaddress) {
+		this.gaddress = gaddress;
+	}
+	public String getGstatus() {
+		return gstatus;
+	}
+	public void setGstatus(String gstatus) {
+		this.gstatus = gstatus;
+	}
+	public float getGprice() {
+		return gprice;
+	}
+	public void setGprice(float gprice) {
+		this.gprice = gprice;
+	} 
+    
+}

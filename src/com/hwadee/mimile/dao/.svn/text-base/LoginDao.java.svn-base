@@ -1,0 +1,46 @@
+package com.hwadee.mimile.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.hwadee.mimile.pojo.User;
+import com.hwadee.mimile.util.DatabaseHelper;
+
+public class LoginDao {
+	DatabaseHelper databaseHelper=new DatabaseHelper();
+	public boolean check(User user)
+	{
+		String sql="select * from user where user.uphonenum = '"+user.getUphonenum()+"' and user.upwd = '"
+		+user.getUpwd()+"'";
+		System.out.println("LoginDao:"+sql);
+		System.out.println(user.getUphonenum());
+		ResultSet rs=databaseHelper.executeQuery(sql);
+		try {
+			if(rs.next())
+			{
+			return true;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 return false;
+		
+	}
+	public void register(User user) {
+		// TODO Auto-generated method stub
+		String sql="insert into user(uid,uphonenum,upwd,uprovince,ucredit,umoney,ucard,uaddress)values('"+
+		user.getUid()+"','"+
+		user.getUphonenum()+"','"+
+		user.getUpwd()+"','"+
+		user.getUprovince()+"','"+
+		user.getUcredit()+"','"+
+		user.getUmoney()+"','"+
+		user.getUcard()+"','"+
+		user.getUmoney()+"')";
+	System.out.println(sql);
+	DatabaseHelper.executeUpdate(sql);
+	
+}
+}

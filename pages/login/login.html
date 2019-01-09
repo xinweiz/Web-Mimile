@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/mmile.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        function reloadCode(){
+            var time =  new Date().getTime();
+            document.getElementById("imagecode").src="picture?d=" + time;
+        }
+
+
+
+    </script>
+    <script>
+        function check(){
+            if(checkName()&&checkPassword()){
+                return true;
+            }
+            return false;
+        }
+
+        function checkName(){
+            var username = document.getElementById("username").value;
+            if(username.length!=11){
+                document.getElementById("error1").innerHTML="用户名为手机号码，请检查格式";
+            }else if(!username.match(/^1[3|4|5|8][0-9]\d{4,8}$/)){
+                document.getElementById("error1").innerHTML="用户名为手机号码，请检查格式";
+            }else{
+                document.getElementById("error1").innerHTML="";
+                return true;
+            }
+            return false;
+        }
+
+        function checkPassword(){
+            var password = document.getElementById("password").value;
+            if(password.length<6){
+                document.getElementById("error2").innerHTML="密码长度为6位到16位";
+            }else if(password.length>16){
+                document.getElementById("error2").innerHTML="密码长度为6位到16位";
+            }else{
+                document.getElementById("error2").innerHTML="";
+                return true;
+            }
+            return false;
+        }
+
+    </script>
+    <title>登录页面</title>
+</head>
+<body>
+<!--左-->
+<a href="http://localhost:8080/pages/homepage/index.jsp"><img class="logo" src="../../pictures/logo.png" style="float: left;"></a>
+<img class="valentine_p" src="../../pictures/love.jpg" style="float: left;">
+<!--右-->
+<form action="loginCheck" class="login" method="post" onsubmit="return check()">
+    <fieldset style="height: 370px;width: 400px;">
+
+        <small id="error1" style="color:#991411;position: absolute;text-align: left;left:38%;top:35%;"></small>
+        <small id="error2" style="color:#991411;position: absolute;text-align: left;left:44%;top:55%;"></small>
+
+        <legend style="width: 100px;font-family: 微软雅黑;text-indent: 2em;">登录</legend>
+        <br><br><br>
+        &nbsp;&nbsp;&nbsp;用户名：<input id="username" onblur="checkName()" type="text" size="25" name="user.uphonenum" style="height: 25px;font-size: 15px;"><br><br><br>
+        &nbsp;&nbsp;&nbsp;密&nbsp;码：<input id="password"  onblur="checkPassword()" type="password" size="25" name="user.upwd" style="height: 25px;font-size: 15px;"><br><br><br>
+        <input name="verification" id="yanzhengma" type="text" size="20" placeholder="验证码" style="height: 25px;" required="required">
+        <img style="" id="imagecode" src="picture">
+        <a href="javascript:reloadCode();" style="padding-top: 20px;float: left;font-size: 15px;margin-right: 30px;">看不清楚</a>
+        <!-- wangwei -->
+        &nbsp;&nbsp;&nbsp;&nbsp;<button class="log_bt" type="submit" style="clear: both;float: left;margin-left: 50px;font-size: 15px;">登录</button>
+    </fieldset>
+</form>
+<!--页尾-->
+<div class="footer" class="" style="position:relative; top:250px; left: 17%;height: 50px;width: 66%;">
+    <ul>
+        <li><a href="https://www.taobao.com/">淘宝</a> |
+            <a href="https://www.tmall.com/">天猫</a> |
+            <a href="http://www.jd.com/">京东</a> |
+            <a href="http://www.dangdang.com/">当当</a> |
+            <a href="http://beauty.vip.com/">唯品会</a> |
+            <a href="http://www.mogujie.com/">蘑菇街</a>
+        </li>
+        <li style="border-bottom: 5px solid #fff;">Copyright © 2016-2026 www.mmloo.com All Rights Reserved</li>
+    </ul>
+</div>
+</body>
+</html>

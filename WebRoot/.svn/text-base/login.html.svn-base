@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/mmile.css" rel="stylesheet" type="text/css">
+    <title>登录页面</title>
+</head>
+<body>
+<div style="width: 1250px;line-height:10px;border-bottom: 1px solid #fff;"></div>
+<img class="logo" src="/pictures/logo.png">
+<img class="valentine_p" src="/pictures/love.jpg">
+<form action="loginAction" class="login">
+    <fieldset style="height: 300px;width: 350px;">
+        <legend style="width: 140px;font-family: "微软雅黑";">&nbsp;&nbsp;&nbsp;登录</legend>
+        <br><br><br>
+        &nbsp;&nbsp;用户名：<input type="text" size="20" name="user.uphonenum"><br><br><br>
+        &nbsp;&nbsp;密&nbsp;码：<input type="password" size="20" name="user.upwd"><br><br><br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button class="log_bt">登录</button>
+    </fieldset>
+</form>
+<!--<div class="foot">-->
+<!--<dl style="width: 300px;">-->
+<!--<dt style="text-indent:2.2em; font-size: 18px;">客服中心</dt>-->
+<!--<dd style="line-height: 25px;color:#ff8a00;font-size: 20px;">4006-780-781</dd>-->
+<!--<dd>E-mail：mmloo@mmloo.com</dd>-->
+<!--<dd>四川省成都市新南路亚华大厦六楼</dd>-->
+<!--</dl>-->
+<!--</div>-->
+<div id="footer" class="wrapper" style="position:absolute; top:600px; left: 220px;height: 50px;width: 800px;">
+    <ul>
+        <li><a>淘宝</a> |
+            <a>淘宝</a> |
+            <a>淘宝</a> |
+            <a>淘宝</a> |
+            <a>淘宝</a> |
+            <a>淘宝</a>
+        </li>
+        <li>Copyright © 2016-2026 www.mmloo.com All Rights Reserved</li>
+    </ul>
+</div>
+</body>
+</html>

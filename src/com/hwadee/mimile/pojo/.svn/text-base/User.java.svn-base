@@ -1,0 +1,79 @@
+package com.hwadee.mimile.pojo;
+//用户
+public class User {
+	/*数据库的主键  用户号*/
+    private int uid;
+    /*用户积分*/
+    private int ucredit;
+    /*用户信用卡号*/
+    private String ucard;
+	/*用户手机号，长度11位的手机号，用来登陆*/
+    private String uphonenum;
+    /*用户密码*/
+    private String upwd;
+    /*用户省份*/
+    private String uprovince;
+    /*用户收货地址*/
+    private String uaddress;
+    /*用户账户余额*/
+    private float umoney;
+    
+    
+    
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+	public int getUcredit() {
+		return ucredit;
+	}
+	public void setUcredit(int ucredit) {
+		this.ucredit = ucredit;
+	}
+	public String getUcard() {
+		return ucard;
+	}
+	public void setUcard(String ucard) {
+		this.ucard = ucard;
+	}
+	
+	public String getUphonenum() {
+		return uphonenum;
+	}
+	public void setUphonenum(String uphonenum) {
+		this.uphonenum = uphonenum;
+	}
+	public String getUpwd() {
+		return upwd;
+	}
+	public void setUpwd(String upwd) {
+		this.upwd = upwd;
+	}
+	public String getUprovince() {
+		return uprovince;
+	}
+	public void setUprovince(String uprovince) {
+		this.uprovince = uprovince;
+	}
+	public String getUaddress() {
+		return uaddress;
+	}
+	public void setUaddress(String uaddress) {
+		this.uaddress = uaddress;
+	}
+	public float getUmoney() {
+		return umoney;
+	}
+	public void setUmoney(float umoney) {
+		this.umoney = umoney;
+	}
+    
+    
+	
+    
+    
+	
+    
+}

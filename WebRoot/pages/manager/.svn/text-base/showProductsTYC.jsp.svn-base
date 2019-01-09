@@ -1,0 +1,88 @@
+<%@ page language="java" import="java.util.*,com.hwadee.mimile.service.GoodsService,com.hwadee.mimile.pojo.Goods" pageEncoding="utf-8"%>
+
+<%
+   GoodsService service = new GoodsService();
+   List<Goods> goodss = service.sortDescByGpriceByType(2);
+%>
+<html>
+   <title>商品管理</title>
+   <head>
+   <script type="text/javascript" src="/js/jquery-3.1.0.min.js"></script>
+   <script type="text/javascript">
+   function addGoods(){
+      window.open("http://localhost:8080/pages/manager/addGoods.jsp","_self");
+   }
+   function modGoods(){
+      var id = "";
+      $(":radio").each(function(){
+         if (this.checked==true) {
+            id = this.value;
+         }
+      });
+      if (id == "") {
+         alert("请选择一条数据！");
+      }
+      window.open("goodsActionFindById?goods.gid="+id,"_self");
+   }
+   function delGoods(){
+      var id = "";
+      $(":radio").each(function(){
+         if (this.checked==true) {
+            id = this.value;
+         }
+      });
+      
+      if (id == "") {
+         alert("请选择一条数据！");
+      }
+      window.open("goodsActionDel.action?goods.gid="+id,"_self");
+   }
+   </script>
+   
+   </head>
+   <body>
+       <h2 align="center">用户管理</h2>
+       <hr>
+       <table width="80%" border="1" align="center" style="border: 1px solid blue;border-collapse: collapse;">
+           <tr align="center">
+               <td>操作</td>
+               
+               <td>商品编号</td>
+               <td>种类编号</td>
+               <td>商品名称</td>
+               <td>商品价格</td>
+               <td>商品数量</td>
+               <td>产地</td>
+               <td>上下架状态</td>
+               <td>图片（链接）</td>
+           </tr>
+           <%
+              for(Goods goods:goodss){
+           %>
+           <tr align="center">
+               <td><input type="radio" name="gid" value="<%=goods.getGid()%>"></td>
+               
+               <td><%=goods.getGid()%></td>
+               <td><%=goods.getTid()%></td>
+               <td><%=goods.getGname() %></td>
+               <td><%=goods.getGprice()%></td>
+               <td><%=goods.getGnum()%></td>
+       		   <td><%=goods.getGaddress()%></td>
+        	   <td><%=goods.getGstatus()%></td>
+        	   <td><%=goods.getGimageurl()%></td>
+           </tr>
+           <%}%>
+           
+       </table>
+       <table width="80%" border="0" align="center">
+       <tr>
+               <td>
+                   <button onclick="addGoods()">添加</button>
+                   <button onclick="modGoods()">修改</button>
+                   <button onclick="delGoods()">删除</button>
+               </td>
+           </tr>
+       </table>
+   </body>
+</html>
+
